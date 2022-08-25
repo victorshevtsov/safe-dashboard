@@ -1,7 +1,8 @@
+import { useSafeAppsSDK } from '@gnosis.pm/safe-apps-react-sdk'
+import { Button, Title } from '@gnosis.pm/safe-react-components'
 import React, { useCallback } from 'react'
 import styled from 'styled-components'
-import { Button, Title } from '@gnosis.pm/safe-react-components'
-import { useSafeAppsSDK } from '@gnosis.pm/safe-apps-react-sdk'
+import { Logo } from './components/Logo'
 
 const Container = styled.div`
   padding: 1rem;
@@ -41,6 +42,7 @@ const SafeApp = (): React.ReactElement => {
 
   return (
     <Container>
+      <Logo />
       <Title size="md">Safe: {safe.safeAddress}</Title>
 
       <Button size="lg" color="primary" onClick={submitTx}>
